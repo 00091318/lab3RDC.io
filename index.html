@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#universidad-centroamericana-josé-simeón-cañas">Universidad Centroamericana José Simeón Cañas</a></li>
+<li><a href="#ciclo-012023-laboratorio-entornos-de-desarrollo-web-con-docker.">Ciclo 01/2023, Laboratorio: Entornos de desarrollo web con Docker.</a>
+<ul>
+<li></li>
+<li><a href="#¿qué-es-docker">¿Qué es Docker?</a></li>
+<li><a href="#conceptos-básicos">Conceptos básicos</a></li>
+<li><a href="#¿para-qué-se-puede-utilizar-docker">¿Para qué se puede utilizar Docker?</a></li>
+<li><a href="#comandos-basicos-de-docker">Comandos basicos de Docker</a></li>
+</ul>
+</li>
+<li><a href="#ejercicio-práctico-creación-de-la-maquina-virtual">Ejercicio práctico/ Creación de la maquina virtual</a>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><a href="#instalación-de-docker">Instalación de Docker</a>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="universidad-centroamericana-josé-simeón-cañas">Universidad Centroamericana José Simeón Cañas</h1>
+<div align="center"><img src="https://uca.edu.sv/wp-content/uploads/2016/06/LogoUCA-negro-bajo-peso.jpg" width="200">`
+</div><h1 id="ciclo-012023-laboratorio-entornos-de-desarrollo-web-con-docker.">Ciclo 01/2023, Laboratorio: Entornos de desarrollo web con Docker.</h1>
+<h3 id="catedrática-elisa-aldana">Catedrática: Elisa Aldana</h3>
+<h3 id="antiguo-cuscatlan">2023, Antiguo Cuscatlan</h3>
+<h2 id="¿qué-es-docker"><strong>¿Qué es Docker?</strong></h2>
+<div align="center"><img src="https://aprenderbigdata.com/wp-content/uploads/docker-logo-1024x876.png" width="200">`
+</div><p>Docker es una plataforma de software que permite crear, probar e implementar aplicaciones<br>
+rápidamente. Docker empaqueta software en unidades estandarizadas llamadas<br>
+contenedores que incluyen todo lo necesario para que el software se ejecute, incluidas<br>
+bibliotecas, herramientas de sistema, código y tiempo de ejecución. Con Docker, puede<br>
+implementar y ajustar la escala de aplicaciones rápidamente en cualquier entorno con la<br>
+certeza de saber que su código se ejecutará.</p>
+<h2 id="conceptos-básicos"><strong>Conceptos básicos</strong></h2>
+<p><strong>Images</strong><br>
+Una imagen es una especie de plantilla, una captura del estado de un contenedor. Se<br>
+podría decir que una imagen de un contenedor es como un snapshot de una máquina<br>
+virtual, pero mucho mucho más ligero.<br>
+Por ejemplo una imagen podría contener un sistema operativo Ubuntu con un servidor<br>
+Apache y tu aplicación web instalada.<br>
+Las imágenes se utilizan para crear contenedores, y nunca cambian.<br>
+<strong>DockerFile</strong><br>
+Es un archivo de configuración que se utiliza para crear imágenes. En dicho archivo se<br>
+indica qué es lo que queremos que tenga la imagen, y los distintos comandos para instalar<br>
+las herramientas.<br>
+<strong>Containers</strong><br>
+Un contenedor de Docker es una instancia en ejecución de una imagen de Docker. Sin<br>
+embargo, a diferencia de la virtualización tradicional con un hipervisor de tipo 1 o tipo 2, un<br>
+contenedor de Docker se ejecuta en el núcleo del sistema operativo host.<br>
+<strong>Volumes</strong><br>
+No es una buena práctica guardar los datos persistentes dentro de un contenedor de<br>
+Docker. Para eso están los volúmenes, fuera de los contenedores. Así se puede crear y<br>
+borrar contenedores sin preocuparse por que se borren los datos.<br>
+Además los volúmenes se utilizan para compartir datos entre contenedores.<br>
+<strong>Links</strong><br>
+Sirven para enlazar contenedores entre sí, que están dentro de una misma máquina, sin<br>
+exponer a los contenedores cuáles son los datos de la máquina que los contiene.</p>
+<h2 id="¿para-qué-se-puede-utilizar-docker"><strong>¿Para qué se puede utilizar Docker?</strong></h2>
+<p><strong>Entrega rápida y consistente de sus aplicaciones.</strong><br>
+Docker agiliza el ciclo de vida del desarrollo permitiendo a los desarrolladores trabajar en<br>
+entornos estandarizados utilizando contenedores locales que proporcionan sus aplicaciones<br>
+y servicios.<br>
+<strong>Escalabilidad</strong>.<br>
+La plataforma basada en contenedores de Docker permite cargas de trabajo altamente<br>
+portátiles. Los contenedores Docker pueden ejecutarse en el portátil local de un<br>
+desarrollador, en máquinas físicas o virtuales en un centro de datos, en proveedores de la<br>
+nube o en una mezcla de entornos.<br>
+<strong>Ejecución de más cargas de trabajo en el mismo hardware.</strong><br>
+Docker es ligero y rápido. Proporciona una alternativa viable y rentable a las máquinas<br>
+virtuales, de modo que puede utilizar más capacidad de cálculo para alcanzar sus objetivos<br>
+empresariales. Docker es perfecto para entornos de alta densidad y para implementaciones<br>
+pequeñas y medianas en las que se necesita hacer más con menos recursos.</p>
+<h2 id="comandos-basicos-de-docker">Comandos basicos de Docker</h2>
+<p><strong>sudo docker run</strong>: este comando se utiliza para ejecutar un contenedor a partir de una imagen. Por ejemplo, docker run ubuntu ejecutará un contenedor basado en la imagen de Ubuntu.</p>
+<p><strong>sudo docker ps</strong>: este comando se utiliza para ver todos los contenedores en ejecución actualmente.</p>
+<p><strong>sudo docker images</strong>: este comando se utiliza para ver todas las imágenes de Docker disponibles en el sistema.</p>
+<p><strong>sudo docker stop</strong>: este comando se utiliza para detener un contenedor que se está ejecutando. Por ejemplo, docker stop my_container detendrá el contenedor llamado “my_container”.</p>
+<p><strong>sudo docker rm</strong>: este comando se utiliza para eliminar un contenedor que ya no se necesita. Por ejemplo, docker rm my_container eliminará el contenedor llamado “my_container”.</p>
+<p><strong>sudo docker rmi</strong>: este comando se utiliza para eliminar una imagen que ya no se necesita. Por ejemplo, docker rmi ubuntu eliminará la imagen de Ubuntu del sistema.</p>
+<p><strong>sudo docker build</strong>: este comando se utiliza para construir una imagen personalizada a partir de un archivo Dockerfile.</p>
+<p><strong>sudo docker exec</strong>: este comando se utiliza para ejecutar un comando dentro de un contenedor en ejecución. Por ejemplo, docker exec my_container ls -l ejecutará el comando “ls -l” dentro del contenedor llamado “my_container”.</p>
+<p><strong>sudo docker-compose</strong>: este comando se utiliza para orquestar múltiples contenedores y sus dependencias en un entorno de aplicación más grande.</p>
+<p><strong>sudo docker network</strong>: este comando se utiliza para administrar redes Docker. Puede crear, eliminar y listar redes Docker utilizando este comando.</p>
+<p><strong>sudo docker volume</strong>: este comando se utiliza para administrar volúmenes Docker. Puede crear, eliminar y listar volúmenes Docker utilizando este comando.</p>
+<p><strong>sudo docker logs</strong>: este comando se utiliza para ver los registros de un contenedor. Puede ver los registros de un contenedor específico utilizando su ID o su nombre.</p>
+<p><strong>sudo docker inspect</strong>: este comando se utiliza para ver información detallada sobre un contenedor, imagen o red Docker. Puede utilizar este comando para ver información como la dirección IP de un contenedor o la configuración de red de una red Docker.</p>
+<p><strong>sudo docker attach</strong>: este comando se utiliza para conectarse a un contenedor en ejecución. Puede utilizar este comando para interactuar con el shell de un contenedor en ejecución o para ver los registros de un contenedor en tiempo real.</p>
+<p><strong>sudo docker cp</strong>: este comando se utiliza para copiar archivos entre el host y un contenedor Docker. Puede utilizar este comando para copiar archivos desde el host al contenedor o desde el contenedor al host.</p>
+<p><strong>sudo docker export</strong>: este comando se utiliza para exportar el sistema de archivos de un contenedor a un archivo tar. Puede utilizar este comando para crear una imagen personalizada a partir de un contenedor existente.</p>
+<p><strong>sudo docker save</strong>: este comando se utiliza para guardar una imagen Docker en un archivo tar. Puede utilizar este comando para guardar una imagen Docker localmente y transferirla a otro sistema Docker.</p>
+<p><strong>sudo docker load</strong>: este comando se utiliza para cargar una imagen Docker desde un archivo tar. Puede utilizar este comando para cargar una imagen Docker guardada previamente en otro sistema Docker.</p>
+<h1 id="ejercicio-práctico-creación-de-la-maquina-virtual">Ejercicio práctico/ Creación de la maquina virtual</h1>
+<h3 id="creación-de-la-máquina-virtual">Creación de la máquina virtual</h3>
+<div align="center"><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/VMware_Player_logo.png" width="100">`
+</div><p>abrimos vm ware y damos click en crear nueva maquina virtual</p>
+<div align="center"><img src="./img1.png" width="600">
+</div><p>click en instaler disk image iso, y en browser buscamos nuestra imagen iso, alojada en el escritorio</p>
+<div align="center"><img src="./img2.png" width="600">
+</div><p>dejamos el nombre por defecto</p>
+<div align="center"><img src="./img3.png" width="600">
+</div><p>tamaño por defeccto(20GB)</p>
+<div align="center"><img src="./img4.png" width="600">
+</div><p>lo siguiente es la informacion de nuestra maquina viertual, y damos click en finish</p>
+<div align="center"><img src="./img5.png" width="600">
+</div><p>La máquina virtual se iniciará desde la imagen ISO que seleccionó y podrá comenzar la instalación del sistema operativo.</p>
+<h3 id="configuración-de-la-maquina-virtual">configuración de la maquina virtual</h3>
+<p>seleccionamos idioma ingles</p>
+<div align="center"><img src="./img6.png" width="800">
+</div><p>click en continue without updating</p>
+<div align="center"><img src="./img7.png" width="800">
+</div><p>click en done, dejaremos el teclado en ingles</p>
+<div align="center"><img src="./img8.png" width="800">
+</div><p>verificamos que solamente este marcado Ubuntu server</p>
+<div align="center"><img src="./img9.png" width="800">
+</div><p>anotamos la ip que s enos muestra, la usaremos mas adelante</p>
+<div align="center"><img src="./img10.png" width="800">
+</div><p>dejamos en blanco el proxy addres</p>
+<div align="center"><img src="./img11.png" width="800">
+</div><p>cambiamos SV por CO, esto debido a que utilizareemos el servidor de colombia</p>
+<div align="center"><img src="./img12.png" width="800">
+</div><p>nos aseguramos que esten marcadas estas opciones</p>
+<div align="center"><img src="./img13.png" width="600">
+</div><p>click en done</p>
+<div align="center"><img src="./img14.png" width="600">
+</div><p>click en continue</p>
+<div align="center"><img src="./img15.png" width="600">
+</div><p>Para fines prácticos del laboratorio, completamos el formulario con los siguientes datos:</p>
+<pre><code>Name: uca
+server name: uca
+username: laboredes03
+password: 12345
+</code></pre>
+<div align="center"><img src="./img16.png" width="800">
+</div><p>dejamos marcado skip for now</p>
+ <div align="center"><img src="./img17.png" width="800">
+</div><p>instalamos ssh, no se utilizara pero de ser necesario lo utilizaremos</p>
+<div align="center"><img src="./img18.png" width="800">
+</div><p>maarcamos unicamente la opcion de docker, con un espacio</p>
+<div align="center"><img src="./img19.png" width="800">
+</div><p>comenzara la actualizacion, tomara unos minutos, pero solo daremos click cuando nos diga reboot now</p>
+<div align="center"><img src="./img20.png" width="800">
+</div><p>si al iniciar la maquina mueestra este error, solo debemos de dar enter y acceder con uestras credenciales</p>
+<div align="center"><img src="./img21.png" width="600">
+</div><h1 id="instalación-de-docker">Instalación de Docker</h1>
+<h3 id="actualizar-base-de-datos-de-paquetes">Actualizar base de datos de paquetes</h3>
+<pre><code>sudo apt update
+</code></pre>
+<p>A continuación, instale algunos paquetes de requisitos previos que permitan a <code>apt</code> usar paquetes a través de HTTPS:</p>
+<pre><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common
+</code></pre>
+<p>Luego, añada la clave de GPG para el repositorio oficial de Docker en su sistema:</p>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre>
+<p>Agregue el repositorio de Docker a las fuentes de APT:</p>
+<pre><code>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+</code></pre>
+<p>A continuación, actualice el paquete de base de datos con los paquetes de Docker del repositorio recién agregado:</p>
+<pre><code>sudo apt update
+</code></pre>
+<p>Asegúrese de estar a punto de realizar la instalación desde el repositorio de Docker en lugar del repositorio predeterminado de Ubuntu:</p>
+<pre><code>apt-cache policy docker-ce
+</code></pre>
+<p>apt-cache policy docker-ce</p>
+<pre><code>sudo apt install docker-ce
+</code></pre>
+<p>Con esto, Docker quedará instalado, el demonio se iniciará y el proceso se habilitará para ejecutarse en el inicio. Compruebe que funcione:</p>
+<pre><code>sudo systemctl status docker
+</code></pre>
+<h3 id="instalar-docker-compose">Instalar Docker Compose</h3>
+<p>El siguiente comando descargará la <code>1.29.2</code>versión y guardará el archivo ejecutable en <code>/usr/local/bin/docker-compose</code>, lo que hará que este software sea accesible globalmente como <code>docker-compose</code>:</p>
+<pre><code>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+</code></pre>
+<p>A continuación, establezca los permisos correctos para que el <code>docker-compose</code>comando sea ejecutable:</p>
+<pre><code>sudo chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<p>Para verificar que la instalación fue exitosa, puede ejecutar:</p>
+<pre><code>docker-compose --version
+</code></pre>
+<h3 id="reiniciar-la-máquina">Reiniciar la máquina</h3>
+<p>Para que algunos de los servicios que acabamos de instalar funcionen<br>
+correctamente, debemos reiniciar nuestra máquina virtual.<br>
+luego de este paso, debremos iniciar sesion denuevo en nuestra maquina virtual<br>
+utiliza el siguiente comando:</p>
+<pre><code> sudo reboot now
+</code></pre>
+<h3 id="verificar-la-versión-de-docker">Verificar la versión de Docker</h3>
+<pre><code>docker version
+</code></pre>
+<h3 id="clonar-el-repositorio-de-github">Clonar el repositorio de Github</h3>
+<p>Creamos una carpeta y ahi clonamos el repositorio</p>
+<pre><code>mkdir repo
+cd repo
+</code></pre>
+<p>Debemos clonar el siguiente repositorio:<br>
+<a href="https://github.com/00091318/docker_guiaLB-main.git">https://github.com/00091318/docker_guiaLB-main.git</a></p>
+<pre><code>git clone https://github.com/00091318/docker_guiaLB-main.git
+</code></pre>
+<p>ejecutamos los siguentes comandos:</p>
+<pre><code>cd docker_guiaLB-main/
+cd Laboratorio3
+cd src
+nano App.js
+</code></pre>
+<p>el codigo debera verse de la siguiente manera:</p>
+<pre><code>import './App.css';
+import { useState, useEffect } from "react";
+import Axios from "axios";
+
+///////////////////////(utilizar IP de la maquina, esa es solo ejemplo, mantener el puerto 3000)
+const API = "http://192.168.134.128:3000";
+///////////////////////(utilizar IP de la maquina, esa es solo ejemplo, mantener el puerto 3000)
+
+function App() {
+  const [name, setName] = useState("");
+  const [listOfInfo, setListOfInfo] = useState([]);
+
+  const addInfo = async() =&gt; {
+    try{
+      console.log("Llego");
+      const data = await Axios.post(API + "/api/infos", {
+        name: name
+      }).then((response) =&gt; {
+        setListOfInfo([
+          ...listOfInfo,
+          { _id: response.data._id, name: name },
+        ]);
+      });
+      window.location.reload();
+    }catch(e){
+      console.log(e);
+    }
+  };
+
+  const updateInfo = (id) =&gt; {
+    const name = prompt("Enter nuevo nombre: ");
+
+    Axios.put(`${API}/api/infos/${id}`, {
+      name: name,
+    }).then((response) =&gt; {
+      setListOfInfo([
+        ...listOfInfo,
+        { _id: response.data._id, name: name },
+      ]);
+    });
+    window.location.reload();
+  };
+
+  const deleteInfo = (id) =&gt; {
+    Axios.delete(`${API}/api/infos/${id}`).then(
+      () =&gt; {
+        setListOfInfo(
+          listOfInfo.filter((val) =&gt; {
+            return val._id != id;
+          })
+        );
+      }
+    );
+  };
+
+  useEffect(() =&gt; {
+    Axios.get(API + "/api/infos")
+      .then((response) =&gt; {
+        setListOfInfo(response.data);
+      })
+      .catch(() =&gt; {
+        console.log("ERR");
+      });
+  }, []);
+</code></pre>
+<p>regresamos al directorio principal ejecutando el comando <strong>cd</strong></p>
+<p>ejecutamos los siguientes comandos:</p>
+<pre><code>cd ..
+cd ..
+cd mongodb/
+ls
+sudo docker compose up -d
+sudo docker  ps -a
+cd ..
+</code></pre>
+<p>el archivo docker compose.yml contiene los siguientes elementos:</p>
+<div align="center"><img src="./dc.png" width="600">
+</div><p>es importante recalcar que tenemos 3 contenedores, en cada uno se debera hacer el mismo proceso (mongdb, Laboratorio3-Api y Laboratorio3 ), asi que realizamos los siguientes comandos:</p>
+<pre><code>debemos de estar en el directorio principal, es decir docker_guiaLB/
+
+cd ..
+cd Laboratorio3-Api/
+ls
+cp docker-compose.dev.yml docker-compose.yml
+sudo docker compose up -d
+sudo docker  ps -a
+cd ..
+
+debemos de estar en el directorio principal, es decir docker_guiaLB/
+
+cd Laboratorio3/
+ls
+cp docker-compose.dev.yml docker-compose.yml
+sudo docker compose up -d
+sudo docker  ps -a
+cd ..
+</code></pre>
+<p>veremos como los contenedores comienzan a levantarse uno por uno, al hacer sudo docker ps -a veremos nuestrso contenedores arriba</p>
+<div align="center"><img src="./img22.png" width="800">
+</div><p>Mostrar las images creadas:</p>
+<pre><code>sudo docker images
+</code></pre>
+<p>Mostrar los contenedores:</p>
+<pre><code>sudo docker ps -a
+</code></pre>
+<p>Mostrar los volumes:</p>
+<pre><code>sudo docker volume ls
+</code></pre>
+<p>Probar el sistema<br>
+Si logramos hacer todo correctamente, podremos ver el sistema corriendo sin mayor<br>
+problema.</p>
+<div align="center"><img src="./img23.png" width="600">
+</div>
+    </div>
+  </div>
+</body>
+
+</html>
